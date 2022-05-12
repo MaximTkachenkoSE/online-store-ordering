@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <div id="order-form" class="card-body border-top none">
+        <h4 class="card-title">Оформление заказа</h4>
+        <form name="form" method="POST" data-netlify="true" 
+        data-netlify-honeypot="bot-field"
+        onSubmit="submit" action="/success">
+          <div class="form-group">
+            <label for="firstName">Имя</label><br>
+            <input type="text" class="form-control" name="firstName" required><br>
+            <label for="lastName">Фамилия</label><br>
+            <input type="text" class="form-control" name="lastName" required><br>
+            <label for="phoneNumber">Мобильный телефон</label><br>
+            <input type="text" class="form-control" name="phoneNumber" required 
+            maxlength="10" pattern="[0-9]{10}"><br>
+            <label for="placeName">Название населеного пункта</label><br>
+            <input type="text" class="form-control" name="placeName" required><br>
+            <label for="number">Номер отделения новой почты</label><br>
+            <input type="text" class="form-control" name="number" required><br>
+            <h4>Оплата наличными при доставке</h4><br>
+          </div>
+          <button type="submit" class="btn1">Отправить</button>
+        </form>
+      </div>
+    <!-- <div id="ordering"></div> -->
+
+    <!-- Ordering -->
+    <script src="Ordering.js"></script>
+    <link rel="stylesheet" href="Ordering.css">
+
+</body>
+</html>
