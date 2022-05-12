@@ -10,7 +10,7 @@
     <div id="order-form" class="card-body border-top none">
         <h4 class="card-title">Оформление заказа</h4>
         <form name="form" method="POST" data-netlify="true" 
-        data-netlify-honeypot="bot-field"
+        netlify-honeypot="bot-field"
         onSubmit="submit" action="/success">
           <div class="form-group">
             <label for="firstName">Имя</label><br>
@@ -24,9 +24,11 @@
             <input type="text" class="form-control" name="placeName" required><br>
             <label for="number">Номер отделения новой почты</label><br>
             <input type="text" class="form-control" name="number" required><br>
+            <input type="hidden" name="bot-field">
             <h4>Оплата наличными при доставке</h4><br>
           </div>
           <button type="submit" class="btn1">Отправить</button>
+          
         </form>
       </div>
     <!-- <div id="ordering"></div> -->
